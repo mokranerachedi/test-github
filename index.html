@@ -84,6 +84,38 @@
       font-size: 6rem;
       color: var(--primary);
     }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-nav a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-nav a:hover {
+      color: #fff;
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
   </style>
 </head>
 <body>
@@ -97,5 +129,16 @@
   <main>
     <h1>Hello World!</h1>
   </main>
+  <footer>
+    <nav class="footer-nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 siteMe. All rights reserved.</p>
+  </footer>
 </body>
 </html>
