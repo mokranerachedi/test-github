@@ -16,13 +16,23 @@ python -m http.server 8080
 
 ## Architecture
 
-Single `index.html` with three sections:
+Single `index.html` with five sections:
 
-- **Header** — fixed 64px bar with logo ("siteMe") and Login/Sign-in buttons
-- **Main** — centered "Hello World!" hero content
-- **Footer** — navigation links and copyright
+- **Header** — sticky 68px bar with logo ("siteMe") and Login/Sign-in buttons
+- **Hero** — two-column grid: editorial headline + hero graphic with badge
+- **Features** — three-column grid (Design / Publish / Grow)
+- **Footer** — logo, tagline, nav links, copyright
 
-**Design tokens (inline CSS):**
-- Primary: `#845ec2` (purple) — header, footer backgrounds
-- Secondary: `#2c73d2` (blue) — Sign in button
-- Background: `#e7f3f8` (light cyan)
+**Fonts (Google Fonts — external dependency):**
+- `Bebas Neue` — display/headings
+- `Lora` — body text, buttons (italic variant used)
+
+**Design tokens (CSS custom properties in `:root`):**
+- `--ink: #1a1714` — dark near-black; header, footer backgrounds, body text
+- `--cream: #faf7f2` — off-white; page background, text on dark
+- `--vermillion: #e8462a` — accent red; CTAs, highlights
+- `--yellow: #f5c842` — secondary accent; graphic tag
+
+**Gotchas:**
+- Buttons use `clip-path: polygon(...)` for the parallelogram shape — don't use `border-radius` on them
+- Responsive breakpoint at `860px` flips hero to single-column and features to stacked
